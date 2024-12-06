@@ -79,14 +79,14 @@ The model achieved high accuracy and effectively captured trends:
    ```
 3. Optional (Run the code on a conda enviornment utilizing CUDA accleration, NVIDIA GPUs only)*
    
-```bash
-conda create -n lstm_env python=3.10
-conda activate lstm_env
-conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
-python -m pip install "tensorflow<2.11"
-pip install pandas matplotlib yfinance numpy scikit-learn keras-tuner
-python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-```
+   ```bash
+   conda create -n lstm_env python=3.10
+   conda activate lstm_env
+   conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+   python -m pip install "tensorflow<2.11"
+   pip install pandas matplotlib yfinance numpy scikit-learn keras-tuner
+   python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+   ```
 *Ensure you have 8GB of VRAM available and Anaconda/Miniconda installed
 ## Usage
 
