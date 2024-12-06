@@ -45,7 +45,7 @@ Key results:
 The dataset comprises 4 years of daily closing prices for Apple Inc. (AAPL), obtained using the `yfinance` library. The data was preprocessed by:
 - Normalizing values using `MinMaxScaler`.
 - Splitting into training and validation sets (80:20 ratio).
-- Using a sliding-window approach for sequence preparation.
+- Using a sliding-window of 30 days for sequence preparation.
 
 ## Model Architecture
 
@@ -63,8 +63,9 @@ The model achieved high accuracy and effectively captured trends:
 - **Validation MAPE**: 1.02%
 - Predicted vs. actual values closely aligned, showcasing minimal overfitting.
 - **Compute time on NVIDIA RTX 3070ti:**
-   a) Bayesian_Optimization = 5 Minutes 21 seconds
-   b) Best_model = 20 seconds
+   a) Bayesian_optimized = 5 Minutes 21 seconds
+   b) Best model = 20 seconds
+  
 ## Installation (Use Google Colab if you are unable to run on a dedicated GPU)
 
 1. Clone the repository:
