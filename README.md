@@ -1,6 +1,7 @@
 # LSTM for Stock Price Prediction
 
 This repository contains the implementation of a Long Short-Term Memory (LSTM) neural network for predicting the stock prices of Apple Inc. (AAPL). The project demonstrates the effectiveness of LSTM in modeling temporal dependencies in financial time-series data.
+
 **DISCLAIMER: The predictions made by this algorithm should not be taken as financial advice. I am not responsible for any losses caused as a result of using this model.**
 ## Table of Contents
 
