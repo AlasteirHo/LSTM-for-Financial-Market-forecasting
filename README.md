@@ -1,7 +1,7 @@
 # LSTM for Stock Price Prediction
 
 This repository contains the implementation of a Long Short-Term Memory (LSTM) neural network for predicting the stock prices of Apple Inc. (AAPL). The project demonstrates the effectiveness of LSTM in modeling temporal dependencies in financial time-series data.
-
+**DISCLAIMER: The predictions made by this algorithm should not be taken as financial advice. I am not responsible for any losses caused as a result of using this model.**
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -61,31 +61,38 @@ The model achieved high accuracy and effectively captured trends:
 - **Validation R² Score**: 0.92
 - **Validation MAPE**: 1.02%
 - Predicted vs. actual values closely aligned, showcasing minimal overfitting.
-
-## Installation
+- **Compute time on NVIDIA RTX 3070ti:**
+   a) Bayesian_Optimization = 5 Minutes 21 seconds
+   b) Best_model = 20 seconds
+## Installation (Use Google Colab if you are unable to run on a dedicated GPU)
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/LSTM-for-stock-prediction.git
-   cd LSTM-for-stock-prediction
+   git clone https://github.com/AlasteirHo/LSTM-for-Financial-Market-forecasting.git
+   cd LSTM-for-Financial-Market-forecasting
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install pandas matplotlib tensorflow yfinance numpy scikit-learn keras-tuner
    ```
-
+3. Optional (Run the code on a conda enviornment utilizing CUDA accleration, NVIDIA GPUs only)*
+   
+```bash
+conda create -n lstm_env python=3.10
+conda activate lstm_env
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+python -m pip install "tensorflow<2.11"
+pip install pandas matplotlib yfinance numpy scikit-learn keras-tuner
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
+*Ensure you have 8GB of VRAM available and Anaconda/Miniconda installed
 ## Usage
 
 1. Download the dataset using the `yfinance` library.
 2. Preprocess the data using the provided scripts.
-3. Train the LSTM model:
-   ```bash
-   python train_model.py
-   ```
-4. Evaluate the model and generate predictions:
-   ```bash
-   python evaluate_model.py
-   ```
+3. Train the LSTM model.
+4. Evaluate the model and generate predictions.
+5. Predict 5 trading days into the future
 
 ## Future Work
 
