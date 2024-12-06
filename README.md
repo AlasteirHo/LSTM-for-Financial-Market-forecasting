@@ -13,7 +13,6 @@ This repository contains the implementation of a Long Short-Term Memory (LSTM) n
 - [Installation](#installation)
 - [Usage](#usage)
 - [Future Work](#future-work)
-- [License](#license)
 
 ## Introduction
 
@@ -94,6 +93,4 @@ The model achieved high accuracy and effectively captured trends:
 - Integrate external features like trading volume, sentiment analysis, and economic indicators.
 - Incorporate attention mechanisms for better adaptability to market volatility.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
