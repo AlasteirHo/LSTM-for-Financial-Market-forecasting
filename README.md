@@ -62,7 +62,7 @@ The model achieved high accuracy and effectively captured trends:
 - **Validation R² Score**: 0.92
 - **Validation MAPE**: 1.02%
 - Predicted vs. actual values closely aligned, showcasing minimal overfitting.
-- **Compute time on NVIDIA RTX 3070ti:**
+- **Compute time on NVIDIA RTX 3070ti:** \\
    a) Bayesian_optimized = 5 Minutes 21 seconds
    b) Best model = 20 seconds
   
